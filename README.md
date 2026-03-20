@@ -129,6 +129,22 @@ docker-compose up --build
 - API: http://localhost:7045
 - Swagger: http://localhost:7045/swagger
 
+## 📸 Telas do sistema
+
+### Categorias
+![Categorias](./prints/categorias.png)
+
+### Pessoas
+![Pessoas](./prints/pessoas.png)
+
+### Transações
+![Transações](./prints/transacoes.png)
+
+### Totais por Pessoa
+![Totais por Pessoa](./prints/totais-pessoa.png)
+
+### Totais por Categoria
+![Totais por Categoria](./prints/totais-categoria.png)
 ## 👩 Autora
 
 Feito por **[Dâmaris Venâncio]**
