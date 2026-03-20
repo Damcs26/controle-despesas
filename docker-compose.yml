@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  # Banco de dados PostgreSQL
+  db:
+    image: postgres:15
+    container_name: controle-despesas-db
+    environment:
+      POSTGRES_DB: ControleDespesasDB
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
+
+  # API em C#
+  backend:
+    build:
+      context: ./ControleDespesas
+    container_name: controle-despesas-api
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__DefaultConnection=Host=db;Port=5432;Database=ControleDespesasDB;Username=postgres;Password=postgres
+    ports:
+      - "7045:8080"
+    depends_on:
+      - db
+
+  # Frontend em React
+  frontend:
+    build:
+      context: ./frontend
+    container_name: controle-despesas-frontend
+    ports:
+      - "5173:80"
+    depends_on:
+      - backend

@@ -1,0 +1,12 @@
+# Backend
+ControleDespesas/bin/
+ControleDespesas/obj/
+ControleDespesas/appsettings.json
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+
+# Sistema
+.vs/
+*.user
