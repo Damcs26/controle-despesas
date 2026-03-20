@@ -145,6 +145,10 @@ docker-compose up --build
 
 ### Totais por Categoria
 ![Totais por Categoria](./prints/totais-categoria.png)
+
+### Testes Swagger
+![Testes Swagger](./prints/testes-swagger.png)
+
 ## 👩 Autora
 
 Feito por **[Dâmaris Venâncio]**
